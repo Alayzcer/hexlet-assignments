@@ -19,7 +19,7 @@ class StackTest < Minitest::Test
     st.push! data
     item = st.pop!
     assert { data == item }
-    assert { st.size == 0 }
+    assert { st.size.empty? }
   end
 
   def test_clear_stack
@@ -27,7 +27,7 @@ class StackTest < Minitest::Test
     data = '51515'
     st.push! data
     st.clear!
-    assert { st.size == 0 }
+    assert { st.size.empty? }
     assert { st.to_a == [] }
   end
 

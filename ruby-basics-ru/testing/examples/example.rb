@@ -44,7 +44,7 @@ end
 
 ### Assertions
 
-describe "Assertions" do
+describe 'ssertions' do
   it 'should be true' do
     var = true
     assert var
@@ -71,7 +71,7 @@ describe "Assertions" do
   end
 
   it 'matches regexp' do
-    assert_match(/\w+/, "some string")
+    assert_match(/\w+/, 'some string')
   end
 
   it 'should include value' do
@@ -89,13 +89,13 @@ describe "Assertions" do
   end
 
   it 'should be descendant of Enumerable' do
-    assert_kind_of Enumerable, Array.new
+    assert_kind_of Enumerable, []
     assert_kind_of Enumerable, Range.new(0, 10)
-    assert_kind_of Enumerable, Hash.new
+    assert_kind_of Enumerable, {}
   end
 
   it 'should be descendant of Enumerable' do
-    [Array.new, Range.new(0, 10), Hash.new].each do |instance|
+    [[], Range.new(0, 10), {}].each do |instance|
       assert_kind_of Enumerable, instance
     end
   end
@@ -103,7 +103,7 @@ end
 
 ### Expectation
 
-describe "Expection" do
+describe 'Expection' do
   it 'should be true' do
     var = true
     _(var).must_equal true
