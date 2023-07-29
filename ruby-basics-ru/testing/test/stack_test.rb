@@ -27,7 +27,7 @@ class StackTest < Minitest::Test
     data = '51515'
     st.push! data
     st.clear!
-    assert { st.size.empty? }
+    assert { st.empty? }
     assert { st.to_a == [] }
   end
 
